@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+
+</head>
+<meta charset="UTF-8">
+<title>Push web app</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+<style>
+</style>
+<body>
+<div class="admin-panel clearfix">
+    <div th:replace="~{fragments/navigation :: navigation}"></div>
+
+    <div class="main">
+        <div class="mainContent clearfix">
+            <div id="dashboard">
+
+                <div class="send-message-form">
+                    <h2 class="header"><span class="icon"></span>Send message</h2>
+                    <form method="post" th:action="@{/notification/topic}" th:object="${pushNotificationRequest}">
+                        <div><label for="topic">Topic</label><br>
+                            <input id="topic" placeholder="Enter topic" th:field="*{topic}" readonly/></div>
+                        <div><label for="title">Message title</label><br>
+                            <input id="title" placeholder="title" th:field="*{title}"/></div>
+                        <div><label for="message">Message</label><br>
+                            <textarea id="message" placeholder="message" th:field="*{message}"/></div>
+                        <input type="submit" value="Send notification">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

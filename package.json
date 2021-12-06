@@ -1,0 +1,7 @@
+{
+  "name": "PushWebApplication",
+  "version": "1.0.0",
+  "dependencies": {
+    "firebase": "^9.3.0"
+  }
+}

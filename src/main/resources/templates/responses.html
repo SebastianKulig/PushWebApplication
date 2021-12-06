@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<meta charset="UTF-8">
+<head>
+    <title>Push web app</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+
+</head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+<style>
+</style>
+<script src=""></script>
+<body>
+<div class="admin-panel clearfix">
+    <div th:replace="~{fragments/navigation :: navigation}"></div>
+    <div class="main">
+        <a class="btn btn-info" th:href="@{/responses}">Refresh </a>
+        <div class="mainContent clearfix">
+            <pre id='object'></pre>
+
+            <div id="users">
+
+                <hr>
+                <div class="container bootstrap snippets bootdey">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-box no-header clearfix">
+                                <div class="main-box-body clearfix">
+                                    <div class="table-responsive">
+                                        <table class="table user-list">
+                                            <thead>
+                                            <tr>
+                                                <th><span>User</span></th>
+                                                <th><span>Message</span></th>
+                                                <th><span>Response</span></th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            <tr th:if="${responses.empty}">
+                                                <td colspan="3"> No responses</td>
+                                            </tr>
+
+                                            <tr th:each="response : ${responses}">
+                                                <td style="width: 20%;">
+                                                    <img src="https://bootdey.com/img/Content/user_1.jpg" alt="">
+                                                    <span th:text="${response.username}"> Name </span>
+                                                </td>
+
+                                                <td style="width: 20%;">
+                                                    <span th:text="${response.message}"> Message </span>
+                                                </td>
+
+                                                <td style="width: 20%;">
+                                                    <span th:text="${response.messageResponse}"> Response </span>
+                                                </td>
+                                            </tr>
+
+                                            </tbody>
+
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<meta charset="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Navigation</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link th:href="@{/css/stylesheet.css}" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="navigation" class="slidebar">
+    <div class="logo">
+        <img th:src="@{/images/logo_1.png}" style="width:150px;height:150px;margin-left: 30px;">
+    </div>
+    <ul>
+        <li><a th:href="@{/users}">Users</a></li>
+        <li><a th:href="@{/topics}">Topics</a></li>
+        <li><a th:href="@{/responses}">Responses</a></li>
+        <li> <a href="javascript: document.logoutForm.submit()" role="menuitem"> Logout</a>
+
+            <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                <input hidden type="submit" value="Sign Out"/>
+            </form> </li>
+    </ul>
+</div>
+</body>
+</html>
