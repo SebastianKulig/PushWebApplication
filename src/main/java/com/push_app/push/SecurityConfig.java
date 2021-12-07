@@ -23,7 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * This method configure HttpSecurity rules
-     * @param http
+     * @param http - HttpSecurity object
      * @throws Exception
      */
     @Override
@@ -39,14 +39,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * This method configure in memory authorization
-     * @param auth
+     * @param auth - AuthenticationManagerBuilder object
      * @throws Exception
      */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("PushAppAdmin")
-                .password(passwordEncoder().encode("PushAppAdminPassw0rd"))
+                .withUser("*****")
+                .password(passwordEncoder().encode("***"))
                 .roles("ADMIN");
     }
 }

@@ -60,7 +60,7 @@ public class FCMService {
     /**
      * Build configuration for android notification
      * @param topic - the name of the user group to which you want to send notification
-     * @return
+     * @return AndroidConfig object
      */
     private AndroidConfig getAndroidConfig(String topic) {
         return AndroidConfig.builder()
@@ -73,7 +73,7 @@ public class FCMService {
     /**
      * Build FCM APNS
      * @param topic - the name of the user group to which you want to send notification
-     * @return ApnsConfig
+     * @return ApnsConfig object
      */
     private ApnsConfig getApnsConfig(String topic) {
         return ApnsConfig.builder()
@@ -84,7 +84,7 @@ public class FCMService {
      * This method prepares a notification to be sent to the specified token
      * @param data - object added to the notification we want to send
      * @param request - PushNotificationRequest object we want to send
-     * @return Message
+     * @return Message object
      */
     private Message getPreconfiguredMessageToToken(Map<String, String> data, PushNotificationRequest request) {
         return getPreconfiguredMessageBuilder(request).putAllData(data).setToken(request.getToken())
@@ -95,7 +95,7 @@ public class FCMService {
      * This method prepares a notification to be sent to the specified topic
      * @param data - object added to the notification we want to send
      * @param request - PushNotificationRequest object we want to send
-     * @return Message
+     * @return Message object
      */
     private Message getPreconfiguredMessageToTopic(Map<String, String> data, PushNotificationRequest request) {
         return getPreconfiguredMessageBuilder(request).putAllData(data).setTopic(request.getTopic())
@@ -105,7 +105,7 @@ public class FCMService {
     /**
      * This method prepares the notification by adding the configurations
      * @param request - PushNotificationRequest object we want to send
-     * @return Message
+     * @return Message object
      */
     private Message.Builder getPreconfiguredMessageBuilder(PushNotificationRequest request) {
         AndroidConfig androidConfig = getAndroidConfig(request.getTopic());
