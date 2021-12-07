@@ -7,7 +7,11 @@
     <br />
     <a href="https://push-web-application.herokuapp.com/">Aplikacja webowa</a>
     ·
+    <a href="https://sebastiankulig.github.io/PushWebApplication/">Dokumentacja aplikacji webowej</a>
+    ·
     <a href="https://github.com/karolwn/push_app">Aplikacja mobilna</a>
+     ·
+    <a href="https://karolwn.github.io/push_app/">Dokumentacja aplikacji mobilnej</a>
 
   </p>
 
